@@ -1,6 +1,7 @@
 const { chromium } = require("playwright");
-const testData = require("../data/testData.json");
-const { TimelinePage } = require("../pageObject/Timeline");
+const userData = require("../data/userData.json");
+const { TimelinePage } = require("../pageObject/TimelinePage");
+const { SearchResultPage } = require('../pageObject/SearchResultPage');
 const { assert } = require("../utils/assertions");
 
 (async () => {
@@ -9,19 +10,20 @@ const { assert } = require("../utils/assertions");
   });
   const context = await browser.newContext();
   const page = await context.newPage();
+
   const timelinePage = new TimelinePage(page);
-
   // Navigates to Mercari website
-  await timelinePage.goToPage(testData.url);
-
+  await timelinePage.navigate(userData.baseUrl);
   // Searches for an specific item
-  await timelinePage.searchItem(testData.item);
-
+  await timelinePage.searchItem(userData.item);
+  
+  const searchResultPage = new SearchResultPage(page);
   // Gets the title of the item in the specified position
-  const itemTitle = await timelinePage.getItemTitle(3);
+  const itemTitle = await searchResultPage.getItemTitle(3);
 
   // Validates the searched item name is included on the item title
-  await assert(itemTitle, testData.item);
+  await assert(itemTitle, userData.item);
 
+  await context.close();
   await browser.close();
 })();
