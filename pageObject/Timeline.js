@@ -6,11 +6,11 @@ class TimelinePage extends Page {
   }
 
   /**
-   * Searches for an specific product
-   * @param {string} product Name of the product to be searched
+   * Searches for an specific item
+   * @param {string} item Name of the item to be searched
    */
-  async searchProduct(product) {
-    await this.page.type('input[placeholder="何かお探しですか？"]', product);
+  async searchItem(item) {
+    await this.page.type('input[placeholder="何かお探しですか？"]', item);
     await Promise.all([
       this.page.waitForNavigation(),
       await this.page.press('input[placeholder="何かお探しですか？"]', "Enter"),
