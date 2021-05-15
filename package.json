@@ -4,6 +4,7 @@
   "description": "Playwright Skill Test",
   "main": "index.js",
   "scripts": {
+    "mst1": "node test/scenario_1.js",
     "mst2": "node test/scenario_2.js"
   },
   "repository": {
