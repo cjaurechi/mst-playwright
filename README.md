@@ -1,8 +1,13 @@
-## How to run tests
+## Skill Test
 
-I've added two custom scripts to run each test individually. Please run the following commands to execute them:
+First of all, install all dependencies by running the following command:
 
 ```
-npm run mst1
+nmp i
+```
+
+I've added two custom scripts to run each test individually. Since I'm overseas, only the second test will run, so please do it by executing the following command:
+
+```
 npm run mst2
 ```
