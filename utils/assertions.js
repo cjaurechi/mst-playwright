@@ -10,4 +10,8 @@ function assert(itemTitle, searchedItem) {
 - Searched item: ${searchedItem}`);
 }
 
-module.exports = { assert };
+function verifyAddress({data}) {
+  await 
+}
+
+module.exports = { assert, verifyAddress };
