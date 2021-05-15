@@ -16,13 +16,13 @@ class Page {
    * @param {int} itemPosition Position of the item to be captured
    * @returns Title of the captured product
    */
-  async getProductTitle(itemPosition) {
+  async getItemTitle(itemPosition) {
     const itemTitle = await this.page.$$eval(
       ".items-box-name.font-2",
       (el, itemPosition) => el[itemPosition - 1].innerText,
       itemPosition
     );
-    return itemTitle;
+    return itemTitle.toLowerCase();
   }
 }
 
