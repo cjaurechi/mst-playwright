@@ -1,6 +1,6 @@
 ## Skill Test
 
-First of all, install all dependencies by running the following command:
+Install all dependencies by running the following command:
 
 ```
 nmp i
