@@ -28,6 +28,7 @@ class ShippingAddressPage extends MyPagePage {
     await this.page.fill('input[placeholder="郵便番号（数字）"]', data.zipcode);
     await this.page.fill('input[placeholder="都道府県"]', data.prefecture);
     await this.page.fill('input[placeholder="市区町村"]', data.municipality);
+    await this.page.fill('input[placeholder="住所"]', data.address);
     await this.page.click('button >> text="登録する"');
   }
 
