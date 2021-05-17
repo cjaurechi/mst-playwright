@@ -3,7 +3,8 @@
     "lastname": "Jaurechi",
     "firstname_kana": "カルロス",
     "lastname_kana": "ハウレチ",
-    "zipcode": "163-8001",
+    "zipcode": "〒106-0032",
     "prefecture": "東京都",
-    "municipality": "東京" 
+    "municipality": "東京",
+    "address": "東京都港区六本木６丁目１０−1 六本木ヒルズ森タワー"
 }
